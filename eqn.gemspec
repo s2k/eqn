@@ -22,14 +22,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'treetop', '>= 1.2.0'
+  spec.add_dependency 'treetop', '>= 1.6.12'
 
-  spec.add_development_dependency 'appraisal', '~> 2.2.0'
-  spec.add_development_dependency 'bundler', '>= 1.9'
+  spec.add_development_dependency 'appraisal', '~> 2.5.0'
+  spec.add_development_dependency 'bundler', '>= 2.5'
   spec.add_development_dependency 'codeclimate-test-reporter', '~> 1.0'
-  spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rubocop', '~> 0.60'
-  spec.add_development_dependency 'rubocop-rspec', '~> 1.30'
-  spec.add_development_dependency 'rspec', '~> 3.5.0'
-  spec.add_development_dependency 'simplecov', '< 0.18'
+  spec.add_development_dependency 'rake', '~> 13.2'
+  spec.add_development_dependency 'rubocop', '~> 1.66'
+  spec.add_development_dependency 'rubocop-rspec', '~> 3.1.0'
+  spec.add_development_dependency 'rspec', '~> 3.13.0'
+  spec.add_development_dependency 'simplecov', '~> 0.22.0'
 end
