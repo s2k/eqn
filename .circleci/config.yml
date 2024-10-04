@@ -3,7 +3,7 @@ jobs:
   test:
     working_directory: ~/eqn
     docker:
-      - image: circleci/ruby:2.6
+      - image: circleci/ruby:3.3
         environment:
           GEM_HOME: ~/eqn/vendor/bundle
     steps:
@@ -12,7 +12,7 @@ jobs:
           key: dependency-cache-{{ checksum "eqn.gemspec" }}
       - run:
           name: bundle-install
-          command: bundle check || bundle install --jobs=4 --retry=3 
+          command: bundle check || bundle install --jobs=4 --retry=3
       - run:
           name: appraisal-install
           command: bundle exec appraisal install
@@ -29,7 +29,7 @@ jobs:
       - run:
           name: codeclimate
           command: bundle exec codeclimate-test-reporter
-      
+
 workflows:
   version: 2
   test:
